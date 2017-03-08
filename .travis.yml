@@ -1,18 +1,18 @@
 env:
   global:
     - BASE_URL="https://github.com/SwissTPH/openmalaria"
-
 os:
   - linux
   - osx
 
 matrix:
+  fast_finish: true
   allow_failures:
     - os: osx
-    - compiler: clang
+      compiler: clang
   exclude:
     - os: osx
-    - compiler: gcc
+      compiler: gcc
 
 sudo: required
 dist: trusty
